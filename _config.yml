@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Site Title
+title:            Freddy's Blog
 locale:           en_US
 url:              
 
@@ -26,12 +26,12 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email: 
-  disqus-shortname: 
-  twitter: #username
+  name: Freddy Rangel
+  avatar: images.jpg
+  bio: "Full Stack Web Developer. Data science enthusiast."
+  email: frederick.rangel@gmail.com
+  disqus-shortname: frederickrangel
+  twitter: frangel85
   facebook: #username
   google:
     plus: #username
@@ -40,8 +40,8 @@ owner:
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: #username
-  stackoverflow: #http://stackoverflow.com/users/123456/username
+  github: freddyrangel
+  stackoverflow: http://stackoverflow.com/users/2626615/freddyrangel
   linkedin: #username
   xing: #username
   instagram: #username
