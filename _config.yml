@@ -17,6 +17,7 @@ gems:
   - jekyll-sitemap
 
 kramdown:
+  input: GFM
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
@@ -28,7 +29,7 @@ kramdown:
 owner:
   name: Freddy Rangel
   avatar: lb_marathon.jpg
-  bio: "Full Stack Web Developer. Data science enthusiast."
+  bio: "Full Stack Web Developer. Data Science Enthusiast."
   email: frederick.rangel@gmail.com
   disqus-shortname: frederickrangel
   twitter: frangel85
