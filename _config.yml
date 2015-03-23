@@ -27,7 +27,7 @@ kramdown:
 # Site owner
 owner:
   name: Freddy Rangel
-  avatar: images.jpg
+  avatar: lb_marathon.jpg
   bio: "Full Stack Web Developer. Data science enthusiast."
   email: frederick.rangel@gmail.com
   disqus-shortname: frederickrangel
@@ -41,7 +41,7 @@ owner:
     ad-slot: 
   bing-verify: 
   github: freddyrangel
-  stackoverflow: http://stackoverflow.com/users/2626615/freddyrangel
+  stackoverflow: 2626615/freddyrangel
   linkedin: #username
   xing: #username
   instagram: #username
