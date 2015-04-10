@@ -3,7 +3,7 @@ layout: post
 title: "DevOps Crash Course: Deployment and Monitoring"
 author: freddyrangel
 modified:
-categories: 
+categories:
 excerpt: "The basics of DevOps developers need to know"
 tags: []
 image:
@@ -107,7 +107,7 @@ Here are a list of services and tool I recommend we implement for deployment:
 * Heroku: makes managing infrastructure much easier
 * New Relic: for performance monitoring
 * CircleCI: for making deployment and continuous integration easier
-* Airbrake: for error tracking
+* Honeybadger: for error tracking
 
 #### Tools
 
