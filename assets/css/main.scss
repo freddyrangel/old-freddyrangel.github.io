@@ -31,7 +31,14 @@ body {
   font-size: larger;
 }
 
-p {
-  margin-bottom: 50px;
+.post p {
+  margin: 5% auto;
 }
 
+.article-author-side p {
+  margin: 0 0 1.625rem;
+}
+
+p+p {
+  text-indent: 0rem;
+}

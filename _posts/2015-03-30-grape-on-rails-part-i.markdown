@@ -50,12 +50,12 @@ date: 2015-03-30T20:19:03-07:00
 </p>
 
 {% highlight ruby %}
-  gem 'grape'
-  gem 'hashie-forbidden_attributes' # disables strong_params for Grape
+gem 'grape'
+gem 'hashie-forbidden_attributes' # disables strong_params for Grape
 
-  group :development, :test do
-    gem 'rspec-rails'
-  end
+group :development, :test do
+  gem 'rspec-rails'
+end
 {% endhighlight %}
 
 <p>
@@ -63,8 +63,8 @@ date: 2015-03-30T20:19:03-07:00
 </p>
 
 {% highlight bash %}
-  bundle install
-  rake db:migrate
+bundle install
+rake db:migrate
 {% endhighlight %}
 
 <p>
@@ -72,7 +72,7 @@ date: 2015-03-30T20:19:03-07:00
 </p>
 
 {% highlight bash %}
-  rails g rspec:install
+rails g rspec:install
 {% endhighlight %}
 
 <p>
@@ -80,46 +80,46 @@ date: 2015-03-30T20:19:03-07:00
 </p>
 
 {% highlight ruby %}
-  #spec/api/example_app/api_spec.rb
-  require 'rails_helper'
+#spec/api/example_app/api_spec.rb
+require 'rails_helper'
 
-  describe ExampleApp::API do
-    describe "GET /api/v1" do
-      before(:each) do
-        ### Send get request with proper HTTP headers
-        get '/api/v1',
-          { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
-      end
-
-      it { expect(response.status).to eq(200) }
+describe ExampleApp::API do
+  describe "GET /api/v1" do
+    before(:each) do
+      ### Send get request with proper HTTP headers
+      get '/api/v1',
+        { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
     end
+
+    it { expect(response.status).to eq(200) }
   end
+end
 {% endhighlight %}
 <p>
   Now we should be getting:
 </p>
 
 {% highlight bash %}
-  uninitialized constant ExampleApp::API (NameError)
+uninitialized constant ExampleApp::API (NameError)
 {% endhighlight %}
 <p>
   Good, now we're getting the right kind of error. Let's create that class:
 </p>
 
 {% highlight ruby %}
-  #/app/api/example_app/api.rb
-  class ExampleApp::API < Grape::API
-    format :json
-    prefix :api
+#/app/api/example_app/api.rb
+class ExampleApp::API < Grape::API
+  format :json
+  prefix :api
 
-    version 'v1', using: :path , vendor: 'example_app' do
-      before { Rails.logger.info "Request Body: #{request.body.read}" }
+  version 'v1', using: :path , vendor: 'example_app' do
+    before { Rails.logger.info "Request Body: #{request.body.read}" }
 
-      get '/' do
-        status 200
-      end
+    get '/' do
+      status 200
     end
   end
+end
 {% endhighlight %}
 <p>
   Grape won't log anything by default, so we're adding a before block to make at
@@ -127,15 +127,15 @@ date: 2015-03-30T20:19:03-07:00
 </p>
 
 {% highlight bash %}
-  Randomized with seed 20573
-  F
+Randomized with seed 20573
+F
 
-  Failures:
+Failures:
 
-    1) ExampleApp::API GET /api/v1
-      Failure/Error: get '/api/v1',
-      ActionController::RoutingError:
-        No route matches [GET] "/api/v1"
+  1) ExampleApp::API GET /api/v1
+    Failure/Error: get '/api/v1',
+    ActionController::RoutingError:
+      No route matches [GET] "/api/v1"
 {% endhighlight %}
 <p>
   So let's mount our Grape app to Rails first let's update our <code>routes.rb</code>
@@ -143,19 +143,19 @@ file:
 </p>
 
 {% highlight ruby %}
-  #/config/routes.rb
-  Rails.application.routes.draw do
-    mount ExampleApp::API => '/'
-  end
+#/config/routes.rb
+Rails.application.routes.draw do
+  mount ExampleApp::API => '/'
+end
 {% endhighlight %}
 <p>
   Now let's update <code>application.rb</code>:
 </p>
 
 {% highlight ruby %}
-  #config/application.rb
-  config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
-  config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+#config/application.rb
+config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
 {% endhighlight %}
 <p>
   Grape does not automatically reload changes in development like Rails, so you
@@ -163,18 +163,18 @@ file:
 </p>
 
 {% highlight ruby %}
-  #config/initializers/reload_api.rb
-  if Rails.env.development?
-    ActiveSupport::Dependencies.explicitly_unloadable_constants << "ExampleApp::API"
+#config/initializers/reload_api.rb
+if Rails.env.development?
+  ActiveSupport::Dependencies.explicitly_unloadable_constants << "ExampleApp::API"
 
-    api_files = Dir[Rails.root.join('app', 'api', '**', '*.rb')]
-    api_reloader = ActiveSupport::FileUpdateChecker.new(api_files) do
-      Rails.application.reload_routes!
-    end
-    ActionDispatch::Callbacks.to_prepare do
-      api_reloader.execute_if_updated
-    end
+  api_files = Dir[Rails.root.join('app', 'api', '**', '*.rb')]
+  api_reloader = ActiveSupport::FileUpdateChecker.new(api_files) do
+    Rails.application.reload_routes!
   end
+  ActionDispatch::Callbacks.to_prepare do
+    api_reloader.execute_if_updated
+  end
+end
 {% endhighlight %}
 <p>
   Now we run our spec and we're all green.
@@ -191,7 +191,7 @@ file:
 </p>
 
 {% highlight ruby %}
-  gem 'rack-cors', require: 'rack/cors'
+gem 'rack-cors', require: 'rack/cors'
 {% endhighlight %}
 
 <p>
@@ -199,14 +199,14 @@ file:
 </p>
 
 {% highlight ruby %}
-  require 'rack/cors'
+require 'rack/cors'
 
-  use Rack::Cors do
-    allow do
-      origins '*'
-      resource '*', headers: :any, methods: :get
-    end
+use Rack::Cors do
+  allow do
+    origins '*'
+    resource '*', headers: :any, methods: :get
   end
+end
 
-  run ExampleApp::API
+run ExampleApp::API
 {% endhighlight %}
