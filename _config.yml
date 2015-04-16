@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Freddy's Blog
+title:            Spaces vs Tabs
 locale:           en_US
 url:
 
@@ -29,7 +29,7 @@ kramdown:
 owner:
   name: Freddy Rangel
   avatar: lb_marathon.jpg
-  bio: "Full Stack Web Developer. Data Science Enthusiast. Evil Genius."
+  bio: "Software Developer. Data Science Nerd. Evil Genius."
   email: frederick.rangel@gmail.com
   disqus-shortname: frederickrangel
   twitter: frangel85
@@ -43,7 +43,7 @@ owner:
   bing-verify:
   github: freddyrangel
   stackoverflow: 2626615/freddyrangel
-  linkedin: #username
+  linkedin: freddy-rangel/29/323/347
   xing: #username
   instagram: #username
   lastfm: #username
