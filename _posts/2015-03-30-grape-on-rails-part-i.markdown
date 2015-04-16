@@ -4,6 +4,7 @@ title: "Grape on Rails: Part I"
 author: freddyrangel
 modified:
 categories:
+comments: true
 excerpt: "Setting up a Grape App inside Rails"
 tags: []
 image:

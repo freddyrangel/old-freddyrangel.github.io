@@ -2,7 +2,7 @@
 layout: page
 tags: [about, Jekyll, theme, responsive]
 modified: 2014-08-08T20:53:07.573882-04:00
-comments: true
+comments: false
 ---
 
 I'm Freddy Rangel. By day I work as a software developer @velocis. On my free

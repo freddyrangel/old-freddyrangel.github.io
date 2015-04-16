@@ -4,8 +4,10 @@ title: "Grape on Rails: Part II"
 author: freddyrangel
 modified:
 categories:
+comments: true
 excerpt: "Authentication for a Grape JSON API"
 tags: []
+comments: true
 image:
   feature:
 date: 2015-04-10T21:57:03-07:00

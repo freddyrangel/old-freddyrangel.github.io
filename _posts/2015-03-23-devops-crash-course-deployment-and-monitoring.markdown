@@ -4,6 +4,7 @@ title: "DevOps Crash Course: Deployment and Monitoring"
 author: freddyrangel
 modified:
 categories:
+comments: true
 excerpt: "The basics of DevOps developers need to know"
 tags: []
 image:

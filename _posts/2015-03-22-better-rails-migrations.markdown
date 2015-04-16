@@ -3,7 +3,8 @@ layout: post
 title: "Better Rails Migrations"
 author: freddyrangel
 modified:
-categories: 
+categories:
+comments: true
 excerpt: "Rails Migrations Guidelines & Tips"
 tags: []
 image:
