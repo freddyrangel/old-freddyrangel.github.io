@@ -11,6 +11,8 @@ image:
   feature:
 date: 2015-03-30T20:19:03-07:00
 ---
+
+
 <p>
   Over the last few months I've had to build a number of JSON APIs for mobile
   and Javascript apps. Unfortunately, Rails' conventions really let us down
@@ -37,6 +39,12 @@ date: 2015-03-30T20:19:03-07:00
 </p>
 
 ### Setup
+
+<p>
+* Note: source code for all examples can be found here: <a
+  href="https://github.com/freddyrangel/grape-on-rails-tutorial">Grape on Rails
+Tutorial</a>
+</p>
 
 <p>
   We're going to fire up a new Rails app:
