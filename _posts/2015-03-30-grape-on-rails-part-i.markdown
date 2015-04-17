@@ -147,7 +147,7 @@ Failures:
       No route matches [GET] "/api/v1"
 {% endhighlight %}
 <p>
-  So let's mount our Grape app to Rails first let's update our <code>routes.rb</code>
+  So let's mount our Grape app onto Rails. First let's update our <code>routes.rb</code>
 file:
 </p>
 
