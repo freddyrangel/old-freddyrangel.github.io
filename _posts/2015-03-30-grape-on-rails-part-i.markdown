@@ -204,7 +204,7 @@ gem 'rack-cors', require: 'rack/cors'
 {% endhighlight %}
 
 <p>
-  And now lets use the middleware in <code>config.rb</code>
+  And now lets use the middleware in <code>config.ru</code>
 </p>
 
 {% highlight ruby %}
