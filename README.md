@@ -1,5 +1,10 @@
-#Freddy's Blog
+#Spaces vs Tabs
 
-Built on GitHub Pages, Jekyll, and Minimal Mistakes theme.
+[Spaces vs Tabs](http://spaces-vs-tabs.com/) is a personal technical blog on the
+latest and greatest topics in software engineering that I find interesting.
 
-You can take a look at my blog at [freddyrangel.github.io](http://freddyrangel.github.io)
+## About the Author
+
+Freddy Rangel is a Software Engineer mostly focused on building client-side
+JavaScript applications with React as well as Ruby, Python, and Golang, APIs and
+microservices.
